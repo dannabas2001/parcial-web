@@ -4,8 +4,9 @@ import { VehiculosComponent } from './vehiculos.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    VehiculosComponent
   ],
-  declarations: [VehiculosComponent]
+  declarations: []
 })
 export class VehiculosModule { }

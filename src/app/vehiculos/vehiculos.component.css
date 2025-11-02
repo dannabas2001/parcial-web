@@ -1,0 +1,24 @@
+.custom-table {
+  width: 60%; /* ancho total de la tabla */
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: center;
+}
+
+.col-id {
+  width: 10%;
+}
+
+.col-marca {
+  width: 25%;
+}
+
+.col-linea {
+  width: 25%;
+}
+
+.col-modelo {
+  width: 40%;
+}

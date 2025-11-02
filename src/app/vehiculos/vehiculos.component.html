@@ -1,3 +1,32 @@
-<p>
-  vehiculos works!
-</p>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/TuSegundazo.com.png" width="253" height="61" alt="Logo">
+    </a>
+  </div>
+</nav>
+
+<img class="banner img-fluid w-100" src="/Banner.png" alt="banner principal" />
+
+<table class="table mx-auto custom-table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col" class="col-id">#</th>
+      <th scope="col" class="col-marca">Marca</th>
+      <th scope="col" class="col-linea">Linea</th>
+      <th scope="col" class="col-modelo">Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehiculo of vehiculos">
+      <th scope="row">{{ vehiculo.id }}</th>
+      <td>{{ vehiculo.marca }}</td>
+      <td>{{ vehiculo.linea }}</td>
+      <td>{{ vehiculo.modelo }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<footer class="text-center mt-4">
+  Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo
+</footer>
