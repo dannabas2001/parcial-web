@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class VehiculosComponent implements OnInit {
   vehiculos: Vehiculo[] = [];
   conteoMarcas: { [marca: string]: number } = {};
+  
   constructor(private getDataService: GetDataService) {}
 
   ngOnInit() {
@@ -19,25 +20,22 @@ export class VehiculosComponent implements OnInit {
       next: (data) => {
         console.log('Datos recibidos:', data);
         this.vehiculos = data;
-        this.conteoMarcas
+        this.contarMarcas();
       },
       error: (error) => {
         console.error('Error al obtener datos', error);
       },
     });
+  }
 
-}
-contarMarcas() {
-  this.conteoMarcas={}
-  for(let v of this.vehiculos){
- if (this.conteoMarcas[v.marca]) {
+  contarMarcas() {
+    this.conteoMarcas = {};
+    for (let v of this.vehiculos) {
+      if (this.conteoMarcas[v.marca]) {
         this.conteoMarcas[v.marca]++;
       } else {
         this.conteoMarcas[v.marca] = 1;
+      }
+    }
   }
-  throw new Error('Function not implemented.');
 }
-
-}
-}
-

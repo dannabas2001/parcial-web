@@ -7,9 +7,8 @@
 </nav>
 <hr/>
 <div class="body-container">
-<div class="img-container">
 <img class="banner" src="/Banner.png" alt="banner principal" />
-</div>
+
 
 <table class="table custom-table">
   <thead class="table-dark">
@@ -30,6 +29,9 @@
   </tbody>
 
 </table>
+</div>
+<div *ngFor="let item of conteoMarcas | keyvalue">
+  <p>Total {{item.key}}: {{ item.value }}</p>
 </div>
 
 
